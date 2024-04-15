@@ -17,7 +17,10 @@ function Projects() {
   if (projects) {
     return projects.map((project) => {
       return (
-        <div
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener"
           className="flex flex-col gap-4 p-4 border rounded-md"
           key={project.name}
         >
@@ -26,7 +29,7 @@ function Projects() {
 
           <p>{project.description}</p>
           <p>{project.technologies}</p>
-        </div>
+        </a>
       );
     });
   }
