@@ -20,7 +20,7 @@ function Projects() {
         <a
           href={project.link}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="flex flex-col gap-4 p-4 border rounded-md"
           key={project.name}
         >
