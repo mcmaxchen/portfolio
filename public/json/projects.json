@@ -4,13 +4,13 @@
     "name": "Spotify",
     "description": "Website with all the mains functionalities of Spotify",
     "technologies": "React, Docker, Tailwindcss, Spotify API",
-    "link": "spotacademy.netlify.app"
+    "link": "https://spotacademy.netlify.app"
   },
   {
     "type": "School project",
     "name": "Twitter",
     "description": "Clone of Twitter with all the mains functionalities",
     "technologies": "Javascript (ES6), JQuery, Ajax, PHP, Tailwindcss",
-    "link": "tweetacademy.netlify.app"
+    "link": "https://tweetacademy.netlify.app"
   }
 ]
