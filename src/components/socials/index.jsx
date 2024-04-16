@@ -25,7 +25,7 @@ function Socials() {
           <img
             src={"/imgs/" + social.image}
             alt={social.image}
-            className="w-6 lg:w-8"
+            className="w-6 md:w-8 lg:w-12 hover:invert"
           />
         </a>
       );

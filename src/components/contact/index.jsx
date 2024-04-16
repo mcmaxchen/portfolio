@@ -50,7 +50,7 @@ function Contact() {
 
       <span id="status">{status}</span>
 
-      <button className="border rounded-md py-3 px-6 w-fit hover:text-secondary">
+      <button className="border rounded-md py-3 px-6 w-fit transition duration-250 transform hover:-translate-y-1 hover:text-secondary">
         Send
       </button>
     </form>

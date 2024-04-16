@@ -1,15 +1,18 @@
 import Projects from "./components/projects";
+import download from "./imgs/download.svg";
 import Navbar from "./components/navbar";
 import Max from "./imgs/Photo.png";
 
-import "./index.css";
 import Socials from "./components/socials";
 import Contact from "./components/contact";
+import Technos from "./components/technos";
+
+import "./index.css";
 
 function App() {
   return (
     <div className="flex justify-center px-5 py-4 md:py-18 md:px-12">
-      <div className="flex flex-col w-[80%] p-5 lg:p-8 lg:w-[70%]">
+      <div className="flex flex-col w-[80%] p-5 lg:p-8 lg:w-[72%]">
         <Navbar />
 
         <div className="flex flex-col gap-2 py-8 gap-6 md:gap-12">
@@ -27,7 +30,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 md:gap-10 text-xs sm:text-sm md:text-md lg:text-lg">
+          <div className="flex flex-col gap-4 md:gap-10 lg:gap-24 text-xs sm:text-sm md:text-md lg:text-lg">
             <section className="flex flex-col gap-6" id="about">
               <h1 className="font-bold text-3xl">About me</h1>
 
@@ -49,12 +52,24 @@ function App() {
                 <img className="h-[20vw] w-auto" src={Max} alt="Max" />
 
                 <a
-                  className="hover:text-secondary border rounded-lg p-6"
+                  className="flex align-items hover:text-secondary border rounded-lg gap-2 p-6"
                   href="./imgs/CV.pdf"
                   download="CHEN_Max.pdf"
                 >
-                  More about my resume
+                  <img
+                    src={download}
+                    alt="download"
+                    className="w-4 md:w-5 lg:w-7"
+                  />
+                  Full resume
                 </a>
+              </div>
+            </section>
+
+            <section id="technos" className="flex flex-col gap-6">
+              <h1 className="font-bold text-3xl">Technologies I like to use</h1>
+              <div className="flex flex-wrap gap-6">
+                <Technos />
               </div>
             </section>
 
@@ -68,7 +83,7 @@ function App() {
               <Contact />
             </section>
 
-            <section id="socials" className="flex gap-4 invert">
+            <section id="socials" className="flex gap-4">
               <Socials />
             </section>
           </div>

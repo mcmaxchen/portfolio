@@ -1,0 +1,26 @@
+[
+  {
+    "name": "JS (ES6+)",
+    "image": "/imgs/javascript.svg"
+  },
+  {
+    "name": "React",
+    "image": "/imgs/react.svg"
+  },
+  {
+    "name": "Node.js",
+    "image": "/imgs/nodejs.svg"
+  },
+  {
+    "name": "MySQL",
+    "image": "/imgs/mysql.svg"
+  },
+  {
+    "name": "PHP",
+    "image": "/imgs/php.svg"
+  },
+  {
+    "name": "Tailwindcss",
+    "image": "/imgs/tailwindcss.svg"
+  }
+]
