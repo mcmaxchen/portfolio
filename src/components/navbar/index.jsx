@@ -8,13 +8,13 @@ function Navbar() {
   return (
     <nav className="border rounded-3xl lg:py-4">
       <ul className="flex justify-center lg:hidden">
-        <li>
+        <li className="relative">
           <button onClick={() => setDropdown(!dropdown)}>
             <img src={List} alt="button" className="w-16" />
           </button>
 
           {dropdown ? (
-            <div className="bg-main absolute border rounded-xl flex flex-col p-4 gap-2">
+            <div className="flex flex-col items-center gap-5 px-10 py-4 absolute border bg-main">
               <ScrollButton name="about" />
               <ScrollButton name="technos" />
               <ScrollButton name="projects" />
