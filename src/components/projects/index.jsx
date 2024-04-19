@@ -1,7 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 function Projects() {
   const [projects, setProjects] = useState();
+  const [modal, dispatch] = useReducer(reducer, { display: false, src: "" });
+
+  function reducer(state, action) {
+    if (action.type === "show") {
+      return {
+        display: true,
+        src: action.src,
+      };
+    }
+
+    if (action.type === "hide") {
+      return {
+        display: false,
+        src: "",
+      };
+    }
+  }
 
   useEffect(() => {
     async function getProjects() {
@@ -27,8 +44,14 @@ function Projects() {
               <p className="underline">{project.type}</p>
 
               <img
-                src={"/imgs/" + project.name + ".png"}
+                src={project.image}
                 alt={project.name}
+                onClick={() =>
+                  dispatch({
+                    type: "show",
+                    src: project.image,
+                  })
+                }
                 className="hidden md:block w-56"
               />
 
@@ -43,6 +66,17 @@ function Projects() {
               >
                 Visit the website
               </a>
+
+              {modal.display ? (
+                <div
+                  className="z-50"
+                  onClick={() => dispatch({ type: "hide" })}
+                >
+                  <img src={modal.src} alt="" />
+                </div>
+              ) : (
+                <></>
+              )}
             </div>
           );
         })}

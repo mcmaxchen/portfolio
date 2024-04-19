@@ -2,6 +2,7 @@
   {
     "type": "School project",
     "name": "Spotify",
+    "image": "/imgs/spotify.png",
     "description": "Website with all the mains functionalities of Spotify",
     "technologies": "React, Docker, Tailwindcss, Spotify API",
     "link": "https://spotacademy.netlify.app"
@@ -9,6 +10,7 @@
   {
     "type": "School project",
     "name": "Twitter",
+    "image": "/imgs/twitter.png",
     "description": "Clone of Twitter with all the mains functionalities",
     "technologies": "Javascript (ES6), JQuery, Ajax, PHP, Tailwindcss",
     "link": "https://tweetacademy.netlify.app"

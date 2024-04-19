@@ -13,7 +13,9 @@ module.exports = {
       pink: "#F5CBD9",
       mauve: "#E0CDE9",
       gray: "#464655",
-      green: "#B2D3AA",
+      green: "#00ff87",
+      blue: "#45caff",
+      cyan: "#60efff",
       battleshipgray: "#93E5AB",
       teal: {
         400: "#2dd4bf",

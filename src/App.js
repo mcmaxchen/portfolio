@@ -16,14 +16,14 @@ function App() {
 
       <section
         id="about"
-        className="snap-start bg-gradient-to-b from-purple via-mauve to-pink text-black"
+        className="flex justify-center snap-start bg-gradient-to-b from-purple via-mauve to-pink text-black"
       >
         <About />
       </section>
 
       <section
         id="projects"
-        className="snap-start bg-battleshipgray text-black"
+        className="snap-start bg-gradient-to-b from-pink text-black"
       >
         <Projects />
       </section>

@@ -1,6 +1,6 @@
 function About() {
   return (
-    <div className="flex flex-col justify-center px-4 sm:p-6 md:p-8 gap-12 sm:text-md md:text-lg lg:text-xl h-screen">
+    <div className="flex flex-col items-center justify-center w-[80%] sm:w-[70%] gap-12 sm:text-md md:text-lg lg:text-xl h-screen">
       <h1 className="font-bold text-3xl">About me</h1>
 
       <p>
