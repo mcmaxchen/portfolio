@@ -40,7 +40,7 @@ function Projects() {
           {projects.map((project) => {
             return (
               <div
-                className="snap-center flex-shrink-0 flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] h-[60vh]"
+                className="snap-center flex-shrink-0 flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm w-[90vw] sm:w-3/4 md:w-80 lg:w-96 h-[60vh]"
                 key={project.name}
               >
                 <h1 className="font-black text-xl">{project.name}</h1>
