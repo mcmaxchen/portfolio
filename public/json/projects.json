@@ -9,6 +9,14 @@
   },
   {
     "type": "School project",
+    "name": "Battleship",
+    "image": "/imgs/spotify.png",
+    "description": "A project left with lots of bugs which I had to correct",
+    "technologies": "Javascript (ES5), Debug",
+    "link": "https://spotacademy.netlify.app"
+  },
+  {
+    "type": "School project",
     "name": "Twitter",
     "image": "/imgs/twitter.png",
     "description": "Clone of Twitter with all the mains functionalities",

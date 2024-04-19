@@ -9,7 +9,7 @@ import Hero from "./components/hero";
 
 function App() {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-auto">
+    <div className="flex flex-col h-screen snap-y snap-mandatory overflow-y-auto">
       <section className="snap-start bg-gradient-to-b from-teal-800 via-teal-400 to-purple text-white">
         <Hero />
       </section>
@@ -28,7 +28,7 @@ function App() {
         <Projects />
       </section>
 
-      <section id="technos" className="snap-start">
+      <section id="technos" className="flex flex-col snap-start">
         <Technos />
       </section>
 

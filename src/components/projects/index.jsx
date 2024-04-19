@@ -33,53 +33,60 @@ function Projects() {
 
   if (projects) {
     return (
-      <div className="h-screen flex flex-col xl:flex-row flex-wrap p-6 gap-6">
-        {projects.map((project) => {
-          return (
-            <div
-              className="flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm xl:h-[60vh]"
-              key={project.name}
-            >
-              <h1 className="font-black text-xl">{project.name}</h1>
-              <p className="underline">{project.type}</p>
+      <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-14 justify-center h-screen">
+        <h1 className="text-3xl font-bold">Projects</h1>
 
-              <img
-                src={project.image}
-                alt={project.name}
-                onClick={() =>
-                  dispatch({
-                    type: "show",
-                    src: project.image,
-                  })
-                }
-                className="hidden md:block w-56"
-              />
-
-              <p className="font-light">{project.description}</p>
-              <p>{project.technologies}</p>
-
-              <a
-                className="border p-4 rounded-md bg-white"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
+        <div className="flex snap-x snap-mandatory overflow-x-auto w-screen gap-6 p-6 ">
+          {projects.map((project) => {
+            return (
+              <div
+                className="snap-center flex-shrink-0 flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm w-[90%] sm:w-[75%] md:w-[65%] lg:w-[55%] h-[60vh]"
+                key={project.name}
               >
-                Visit the website
-              </a>
+                <h1 className="font-black text-xl">{project.name}</h1>
+                <p className="underline">{project.type}</p>
 
-              {modal.display ? (
-                <div
-                  className="z-50"
-                  onClick={() => dispatch({ type: "hide" })}
-                >
-                  <img src={modal.src} alt="" />
+                <div className="hidden md:flex flex-col items-center text-xs">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    onClick={() =>
+                      dispatch({
+                        type: "show",
+                        src: project.image,
+                      })
+                    }
+                    className="h-24 sm:h-36"
+                  />
+                  <span>Cliquez pour agrandir l'image</span>
                 </div>
-              ) : (
-                <></>
-              )}
-            </div>
-          );
-        })}
+
+                {modal.display ? (
+                  <div
+                    className="flex justify-center items-center absolute top-0 left-0 z-50 h-screen w-screen"
+                    onClick={() => dispatch({ type: "hide" })}
+                  >
+                    <img src={modal.src} alt="" className="w-[90%] z-50" />
+                  </div>
+                ) : (
+                  <></>
+                )}
+
+                <p className="font-light">{project.description}</p>
+                <p>{project.technologies}</p>
+
+                <a
+                  className="border border-mauve p-4 rounded-md bg-gradient-to-t from-pink to-mauve"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit the website
+                </a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

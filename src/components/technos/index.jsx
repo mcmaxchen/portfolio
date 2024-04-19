@@ -14,18 +14,22 @@ function Technos() {
   });
 
   if (technos) {
-    return technos.map((techno) => {
-      return (
-        <div key={techno.name}>
-          <h2>{techno.name}</h2>
-          <img
-            src={techno.image}
-            alt={techno.name}
-            className="w-12 md:w-18 lg:w-24"
-          />
-        </div>
-      );
-    });
+    return (
+      <div className="flex flex-wrap gap-3">
+        {technos.map((techno) => {
+          return (
+            <div key={techno.name}>
+              <h2>{techno.name}</h2>
+              <img
+                src={techno.image}
+                alt={techno.name}
+                className="w-16 md:w-24 lg:w-28"
+              />
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 }
 
