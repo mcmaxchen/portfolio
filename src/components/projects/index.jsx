@@ -36,7 +36,7 @@ function Projects() {
       <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-14 justify-center h-screen">
         <h1 className="text-3xl font-bold">Projects</h1>
 
-        <div className="flex snap-x snap-mandatory overflow-x-auto w-screen gap-6 p-6 ">
+        <div className="flex snap-x snap-mandatory overflow-x-auto w-full gap-6 p-6 ">
           {projects.map((project) => {
             return (
               <div
