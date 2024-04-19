@@ -3,10 +3,19 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     colors: {
-      main: "#2C2C54",
-      secondary: "#474787",
-      terciary: "#E4E4DE",
-      text: "#ECECEC",
+      main: "#fafafa",
+      secondary: "#131614",
+      text: "#010B13",
+      black: "#010B13",
+      white: "#FFFFFB",
+      beige: "#D1C0A8",
+      gray: "#464655",
+      battleshipgray: "#93E5AB",
+      teal: {
+        400: "#2dd4bf",
+        500: "#16CAB8",
+        800: "#115e59",
+      },
     },
     screens: {
       sm: "475px",

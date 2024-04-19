@@ -15,23 +15,39 @@ function Projects() {
   }, []);
 
   if (projects) {
-    return projects.map((project) => {
-      return (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col gap-4 p-4 border rounded-md"
-          key={project.name}
-        >
-          <h1 className=" font-bold text-xl">{project.name}</h1>
-          <p className="underline">{project.type}</p>
+    return (
+      <div className="h-screen flex flex-col xl:flex-row flex-wrap p-6 gap-6">
+        {projects.map((project) => {
+          return (
+            <div
+              className="flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm xl:h-[60vh]"
+              key={project.name}
+            >
+              <h1 className="font-black text-xl">{project.name}</h1>
+              <p className="underline">{project.type}</p>
 
-          <p>{project.description}</p>
-          <p>{project.technologies}</p>
-        </a>
-      );
-    });
+              <img
+                src={"/imgs/" + project.name + ".png"}
+                alt={project.name}
+                className="hidden md:block w-56"
+              />
+
+              <p className="font-light">{project.description}</p>
+              <p>{project.technologies}</p>
+
+              <a
+                className="border p-4 rounded-md bg-white"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit the website
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    );
   }
 }
 
