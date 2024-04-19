@@ -10,13 +10,13 @@ import Hero from "./components/hero";
 function App() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-auto">
-      <section className="snap-start bg-gradient-to-b from-teal-800 via-teal-400 to-beige text-white">
+      <section className="snap-start bg-gradient-to-b from-teal-800 via-teal-400 to-purple text-white">
         <Hero />
       </section>
 
       <section
         id="about"
-        className="snap-start bg-gradient-to-b from-beige from-90% to-battleshipgray text-black"
+        className="snap-start bg-gradient-to-b from-purple via-mauve to-pink text-black"
       >
         <About />
       </section>

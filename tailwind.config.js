@@ -5,11 +5,15 @@ module.exports = {
     colors: {
       main: "#fafafa",
       secondary: "#131614",
-      text: "#010B13",
+      text: "#0F253E",
       black: "#010B13",
       white: "#FFFFFB",
       beige: "#D1C0A8",
+      purple: "#CACFF9",
+      pink: "#F5CBD9",
+      mauve: "#E0CDE9",
       gray: "#464655",
+      green: "#B2D3AA",
       battleshipgray: "#93E5AB",
       teal: {
         400: "#2dd4bf",
