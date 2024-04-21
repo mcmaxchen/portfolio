@@ -22,5 +22,9 @@
   {
     "name": "Tailwindcss",
     "image": "/imgs/tailwindcss.svg"
+  },
+  {
+    "name": "Github",
+    "image": "/imgs/github.svg"
   }
 ]

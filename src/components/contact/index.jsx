@@ -1,8 +1,19 @@
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Contact() {
   const [status, setStatus] = useState();
+  const [socials, setSocials] = useState();
+
+  useEffect(() => {
+    function getSocials() {
+      fetch("/json/socials.json").then(async (socials) => {
+        setSocials(await socials.json());
+      });
+    }
+
+    getSocials();
+  }, []);
 
   async function sendEmail(e) {
     e.preventDefault();
@@ -33,27 +44,60 @@ function Contact() {
   }
 
   return (
-    <form onSubmit={(e) => sendEmail(e)} className="flex flex-col gap-6">
-      <input
-        className="p-4 rounded-md"
-        type="text"
-        id="email"
-        placeholder="What's your email?"
-      />
+    <div className="flex flex-col justify-center items-center h-screen gap-8">
+      <h1 className="text-3xl font-black">Let's get in touch!</h1>
+      <form
+        onSubmit={(e) => sendEmail(e)}
+        className="flex flex-col gap-6 p-4 w-screen sm:w-[476px] md:w-[600px]"
+      >
+        <input
+          className="p-4 rounded-md border"
+          type="text"
+          id="email"
+          placeholder="What's your email?"
+        />
 
-      <textarea
-        className="p-4 rounded-md"
-        placeholder="Send me a message!"
-        id="message"
-        rows="7"
-      />
+        <textarea
+          className="p-4 rounded-md border"
+          placeholder="Send me a message!"
+          id="message"
+          rows="7"
+        />
 
-      <span id="status">{status}</span>
+        <span id="status">{status}</span>
 
-      <button className="border rounded-md py-3 px-6 w-fit transition duration-250 transform hover:-translate-y-1 hover:text-secondary">
-        Send
-      </button>
-    </form>
+        <button className="rounded-md py-3 px-6 w-fit transition duration-500 transform hover:-translate-y-3 hover:text-white hover:shadow-2xl bg-vistablue">
+          Send
+        </button>
+      </form>
+
+      {socials ? (
+        <div className="flex flex-col items-center gap-8">
+          <h3 className="text-2xl font-medium">My social networks</h3>
+
+          <div className="flex gap-4">
+            {socials.map((social) => {
+              return (
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={social.link}
+                  key={social.image}
+                >
+                  <img
+                    src={"/imgs/" + social.image}
+                    alt={social.image}
+                    className="w-16 hover:invert duration-700"
+                  />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+    </div>
   );
 }
 

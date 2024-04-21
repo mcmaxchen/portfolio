@@ -1,5 +1,4 @@
 import Projects from "./components/projects";
-import Socials from "./components/socials";
 import Contact from "./components/contact";
 import Technos from "./components/technos";
 import About from "./components/about";
@@ -23,21 +22,23 @@ function App() {
 
       <section
         id="projects"
-        className="snap-start bg-gradient-to-b from-pink text-black"
+        className="snap-start bg-gradient-to-b from-pink from-10% via-purple via-90% to-silverlake text-black"
       >
         <Projects />
       </section>
 
-      <section id="technos" className="flex flex-col snap-start">
+      <section
+        id="technos"
+        className="flex flex-col snap-start bg-gradient-to-b from-silverlake via-vistablue to-polynesianblue"
+      >
         <Technos />
       </section>
 
-      <section id="contact" className="snap-start">
+      <section
+        id="contact"
+        className="snap-start bg-gradient-to-b from-polynesianblue to-lapislazuli"
+      >
         <Contact />
-      </section>
-
-      <section id="socials" className="snap-start">
-        <Socials />
       </section>
     </div>
   );

@@ -33,10 +33,12 @@ function Projects() {
 
   if (projects) {
     return (
-      <div className="flex flex-col items-center gap-6 sm:gap-8 lg:gap-14 justify-center h-screen">
-        <h1 className="text-3xl font-bold">Projects</h1>
+      <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-14 h-screen">
+        <h1 className="text-3xl font-bold">Experience</h1>
 
-        <div className="flex snap-x snap-mandatory overflow-x-auto w-full gap-6 p-6 ">
+        <h3 className="text-xl font-medium">A few projects I worked on :</h3>
+
+        <div className="flex snap-x snap-mandatory overflow-x-auto w-full gap-6 p-6 lg:justify-center">
           {projects.map((project) => {
             return (
               <div
@@ -47,18 +49,28 @@ function Projects() {
                 <p className="underline">{project.type}</p>
 
                 <div className="hidden md:flex flex-col items-center text-xs">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    onClick={() =>
-                      dispatch({
-                        type: "show",
-                        src: project.image,
-                      })
-                    }
-                    className="h-24 sm:h-36"
-                  />
-                  <span>Cliquez pour agrandir l'image</span>
+                  {project.image ? (
+                    <>
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        onClick={() =>
+                          dispatch({
+                            type: "show",
+                            src: project.image,
+                          })
+                        }
+                        className="h-24 sm:h-36"
+                      />
+                      <span>Cliquez pour agrandir l'image</span>
+                    </>
+                  ) : (
+                    <>
+                      <video className="h-24 sm:h-36" controls>
+                        <source src={project.video} type="video/mp4" />
+                      </video>
+                    </>
+                  )}
                 </div>
 
                 {modal.display ? (
