@@ -18,7 +18,7 @@
   {
     "type": "School project",
     "name": "Twitter",
-    "image": "/imgs/twitter.png",
+    "video": "/imgs/twitter.mp4",
     "description": "Clone of Twitter with all the main functionalities",
     "technologies": "Javascript (ES6), JQuery, Ajax, PHP, Tailwindcss",
     "link": "https://tweetacademy.netlify.app"
