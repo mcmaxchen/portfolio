@@ -33,16 +33,17 @@ function Projects() {
 
   if (projects) {
     return (
-      <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 lg:gap-14 h-screen">
+      <div className="flex flex-col justify-center items-center gap-2 h-screen">
         <h1 className="text-3xl font-bold">Experience</h1>
 
         <h3 className="text-xl font-medium">A few projects I worked on :</h3>
+        <p className="lg:hidden">Swipe &#x2192;</p>
 
         <div className="flex snap-x snap-mandatory overflow-x-auto w-full gap-6 p-6 lg:justify-center">
           {projects.map((project) => {
             return (
               <div
-                className="snap-center flex-shrink-0 flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm w-[90vw] sm:w-3/4 md:w-80 lg:w-96 h-[60vh]"
+                className="snap-center flex-shrink-0 flex flex-col items-center justify-around gap-4 px-4 py-2 border rounded-sm w-[90vw] sm:w-96 h-[72vh]"
                 key={project.name}
               >
                 <h1 className="font-black text-xl">{project.name}</h1>
@@ -62,7 +63,7 @@ function Projects() {
                         }
                         className="h-24 sm:h-36"
                       />
-                      <span>Cliquez pour agrandir l'image</span>
+                      <span>Click to see the full image</span>
                     </>
                   ) : (
                     <>
@@ -75,7 +76,7 @@ function Projects() {
 
                 {modal.display ? (
                   <div
-                    className="flex justify-center items-center absolute top-0 left-0 z-50 h-screen w-screen"
+                    className="flex justify-center items-center absolute top-0 left-0 z-50 h-screen w-screen bg-black"
                     onClick={() => dispatch({ type: "hide" })}
                   >
                     <img src={modal.src} alt="" className="w-[90%] z-50" />
